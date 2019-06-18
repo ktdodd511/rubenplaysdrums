@@ -16,7 +16,7 @@ class AppNavbar extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarMain">
 
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav m-auto">
               <li className="nav-item">
                 <Link to="/" className="nav-link">
                   Home
@@ -28,8 +28,28 @@ class AppNavbar extends Component {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/Contact" className="nav-link">
+                <Link to="/contact" className="nav-link">
                   Contact
+                </Link>
+              </li>
+              <li className="nav-item ml-3 mr-3">
+                <Link to="/" className="nav-link" id="navbar-name">
+                  Ruben Rios
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/video" className="nav-link">
+                  Video
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/music" className="nav-link">
+                  Music
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/schedule" className="nav-link">
+                  Schedule
                 </Link>
               </li>
             </ul>
