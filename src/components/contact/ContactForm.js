@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 
 const encode = (data) => {
@@ -11,7 +10,7 @@ const encode = (data) => {
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "", phone: "", company: "" };
+    this.state = { name: "", email: "", message: "" };
   }
 
   /* Here’s the juicy bit for posting the form submission */
@@ -31,7 +30,7 @@ class ContactForm extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, message, phone, company } = this.state;
+    const { name, email, message } = this.state;
     return (
       <div>
         <div className="text-center">
@@ -41,29 +40,18 @@ class ContactForm extends React.Component {
         <div>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <label htmlFor="exampleFormControlInput1">Email address*</label>
-              <input type="email" name="email" className="form-control" id="contact-email" placeholder="name@example.com" required/>
+              <label htmlFor="exampleFormControlInput1">Email address</label>
+              <input type="email" name="email" className="form-control" id="contact-email" value={name} placeholder="name@example.com" onChange={this.handleChange} required/>
             </div>
             <div className="form-group">
-              <label htmlFor="name">Name*</label>
-              <input name="name" type="text" className="form-control" id="contact-text" required/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="Company">Company</label>
-              <input name="company" type="text" className="form-control" id="contact-text"/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="example-tel-input">Phone</label>
-              <input className="form-control" name="phone" type="tel" placeholder="(555)-555-5555" id="example-tel-input"/>
+              <label htmlFor="name">Name</label>
+              <input name="name" type="text" className="form-control" id="contact-text" value={email} onChange={this.handleChange} required/>
             </div>
             <div className="form-group">
               <label htmlFor="exampleFormControlTextarea1">Message</label>
-              <textarea name="message" type="text" className="form-control" id="contact-text" rows="3"></textarea>
+              <textarea name="message" type="text" className="form-control" id="contact-text" rows="3" value={message} onChange={this.handleChange} required></textarea>
             </div>
             <button type="submit" id="contact-submit" className="btn btn-primary mb-2">Submit</button>
-            <p>
-              *required
-            </p>
           </form>
         </div>
       </div>
