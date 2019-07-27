@@ -11,7 +11,7 @@ class Contact extends Component {
         </div>
 
         <div>
-          <form name="contact" method="POST" data-netlify="true" id="contact-form">
+          <form name="contactForm" method="POST" data-netlify="true" id="contact-form">
             <div className="form-group">
               <label htmlFor="exampleFormControlInput1">Email address*</label>
               <input type="email" name="Email" className="form-control" id="contact-email" placeholder="name@example.com" required/>
