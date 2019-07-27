@@ -41,11 +41,11 @@ class ContactForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="exampleFormControlInput1">Email address</label>
-              <input type="email" name="email" className="form-control" id="contact-email" value={name} placeholder="name@example.com" onChange={this.handleChange} required/>
+              <input type="email" name="email" className="form-control" id="contact-email" value={email} placeholder="name@example.com" onChange={this.handleChange} required/>
             </div>
             <div className="form-group">
               <label htmlFor="name">Name</label>
-              <input name="name" type="text" className="form-control" id="contact-text" value={email} onChange={this.handleChange} required/>
+              <input name="name" type="text" className="form-control" id="contact-text" value={name} onChange={this.handleChange} required/>
             </div>
             <div className="form-group">
               <label htmlFor="exampleFormControlTextarea1">Message</label>
