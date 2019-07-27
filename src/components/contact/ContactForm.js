@@ -25,6 +25,8 @@ class ContactForm extends React.Component {
       .catch(error => alert(error));
 
     e.preventDefault();
+
+    this.setState({ name: "", email:"", message: ""});
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
