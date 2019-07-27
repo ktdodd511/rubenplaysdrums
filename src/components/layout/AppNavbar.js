@@ -6,6 +6,11 @@ class AppNavbar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+
+        <Link to="/" className="navbar-brand" id="navbar-name">
+          Ruben Rios
+        </Link>
+
         <div className="container">
           <button
             className="navbar-toggler"
@@ -32,11 +37,8 @@ class AppNavbar extends Component {
                   Contact
                 </Link>
               </li>
-              <li className="nav-item ml-3 mr-3">
-                <Link to="/" className="nav-link" id="navbar-name">
-                  Ruben Rios
-                </Link>
-              </li>
+
+
               <li className="nav-item">
                 <Link to="/video" className="nav-link">
                   Video

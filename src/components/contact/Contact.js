@@ -12,27 +12,27 @@ class Contact extends Component {
 
         <div>
           <form name="contact" method="POST" data-netlify="true" id="contact-form">
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Email address*</label>
-              <input type="email" name="Email" class="form-control" id="contact-email" placeholder="name@example.com" required/>
+            <div className="form-group">
+              <label htmlFor="exampleFormControlInput1">Email address*</label>
+              <input type="email" name="Email" className="form-control" id="contact-email" placeholder="name@example.com" required/>
             </div>
-            <div class="form-group">
-              <label for="name">Name*</label>
-              <input name="Name" type="text" class="form-control" id="contact-text" required/>
+            <div className="form-group">
+              <label htmlFor="name">Name*</label>
+              <input name="Name" type="text" className="form-control" id="contact-text" required/>
             </div>
-            <div class="form-group">
-              <label for="Company">Company</label>
-              <input name="Company" type="text" class="form-control" id="contact-text"/>
+            <div className="form-group">
+              <label htmlFor="Company">Company</label>
+              <input name="Company" type="text" className="form-control" id="contact-text"/>
             </div>
-            <div class="form-group">
-              <label for="example-tel-input">Phone</label>
-              <input class="form-control" name="Phone" type="tel" placeholder="(555)-555-5555" id="example-tel-input"/>
+            <div className="form-group">
+              <label htmlFor="example-tel-input">Phone</label>
+              <input className="form-control" name="Phone" type="tel" placeholder="(555)-555-5555" id="example-tel-input"/>
             </div>
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Message</label>
-              <textarea name="Message" type="text" class="form-control" id="contact-text" rows="3"></textarea>
+            <div className="form-group">
+              <label htmlFor="exampleFormControlTextarea1">Message</label>
+              <textarea name="Message" type="text" className="form-control" id="contact-text" rows="3"></textarea>
             </div>
-            <button type="submit" id="contact-submit" class="btn btn-primary mb-2">Submit</button>
+            <button type="submit" id="contact-submit" className="btn btn-primary mb-2">Submit</button>
             <p>
               *required
             </p>
