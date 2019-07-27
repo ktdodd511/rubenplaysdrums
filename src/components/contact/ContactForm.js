@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Alert } from 'reactstrap';
 
 
 const encode = (data) => {
@@ -21,7 +22,10 @@ class ContactForm extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(() => {
+        alert("Your input has been submitted!");
+        document.location.replace("/");
+      })
       .catch(error => alert(error));
 
     e.preventDefault();
