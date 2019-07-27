@@ -16,7 +16,7 @@ class ContactForm extends React.Component {
   /* Here’s the juicy bit for posting the form submission */
 
   handleSubmit = e => {
-    fetch("/contact", {
+    fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
@@ -38,7 +38,7 @@ class ContactForm extends React.Component {
         </div>
 
         <div>
-          <form onSubmit={this.handleSubmit}>
+          <form name="contact" onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="exampleFormControlInput1">Email address</label>
               <input type="email" name="email" className="form-control" id="contact-email" value={email} placeholder="name@example.com" onChange={this.handleChange} required/>
