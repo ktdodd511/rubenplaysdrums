@@ -7,7 +7,7 @@ class AppNavbar extends Component {
     return (
       <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
 
-        <Link to="/" className="navbar-brand" id="navbar-name">
+        <Link to="/" className="navbar-brand m-auto" id="navbar-name">
           Ruben Rios
         </Link>
 
@@ -21,12 +21,7 @@ class AppNavbar extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarMain">
 
-            <ul className="navbar-nav m-auto">
-              <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  Home
-                </Link>
-              </li>
+            <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link to="/news" className="nav-link">
                   News
@@ -37,7 +32,6 @@ class AppNavbar extends Component {
                   Contact
                 </Link>
               </li>
-
 
               <li className="nav-item">
                 <Link to="/video" className="nav-link">
